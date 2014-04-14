@@ -8,11 +8,13 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Only for use with the Simple Course Creator (SCC) plugin, this add-on provides a customizer section for SCC output.
+Add post meta information for Simple Course Creator output.
 
 == Description ==
 
-Add post meta information to the post list output from Simple Course Creator
+This plugins must be used with [Simple Course Creator](http://wordpress.org/plugins/simple-course-creator/).
+
+Add post meta information to the post list output from Simple Course Creator. Below each post in a course, the author and published date is displayed.
 
 == Installation ==
 
