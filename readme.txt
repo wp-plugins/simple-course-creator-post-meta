@@ -1,5 +1,5 @@
 === Simple Course Creator Post Meta ===
-Contributors: sdavis2702, mattonomics
+Contributors: sdavis2702, mattonomics, dewanemutunga
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S
 Tags: customizer, series, course, lesson, taxonomy
 Requires at least: 3.8
