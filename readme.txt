@@ -12,7 +12,7 @@ Add post meta information for Simple Course Creator output.
 
 == Description ==
 
-This plugins must be used with [Simple Course Creator](http://wordpress.org/plugins/simple-course-creator/).
+This plugin must be used with [Simple Course Creator](http://wordpress.org/plugins/simple-course-creator/).
 
 Add post meta information to the post list output from Simple Course Creator. Below each post in a course, the author and published date is displayed.
 
