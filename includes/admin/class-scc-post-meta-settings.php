@@ -51,8 +51,10 @@ class SCC_Post_Meta_Settings {
 	 */
 	public function post_meta_author() {
 		$pm_author = get_option( 'course_display_settings' );
-		echo '<input id="display_post_meta_author" type="checkbox" name="course_display_settings[display_author]" value="1" ' . checked( 1, isset( $pm_author['display_author'] ) ? $pm_author['display_author'] : 0, false ) . ' />';
-		echo '<label for="display_post_meta_author">' . __( 'Hide the list item post meta author', 'scc_post_meta' ) . '</label>';
+		?>
+		<input id="display_post_meta_author" type="checkbox" name="course_display_settings[display_author]" value="1" <?php echo checked( 1, isset( $pm_author['display_author'] ) ? $pm_author['display_author'] : 0, false ); ?>>
+		<label for="display_post_meta_author"><?php _e( 'Check this box to hide the list item post meta author.', 'scc_post_meta' ); ?></label>
+		<?php
 	}
 	
 	
@@ -63,8 +65,10 @@ class SCC_Post_Meta_Settings {
 	 */
 	public function post_meta_date() {
 		$pm_date = get_option( 'course_display_settings' );
-		echo '<input id="display_post_meta_date" type="checkbox" name="course_display_settings[display_date]" value="1" ' . checked( 1, isset( $pm_date['display_date'] ) ? $pm_date['display_date'] : 0, false ) . ' />';
-		echo '<label for="display_post_meta_date">' . __( 'Hide the list item post meta date', 'scc_post_meta' ) . '</label>';
+		?>
+		<input id="display_post_meta_date" type="checkbox" name="course_display_settings[display_date]" value="1" <?php echo checked( 1, isset( $pm_date['display_date'] ) ? $pm_date['display_date'] : 0, false ); ?>>
+		<label for="display_post_meta_date"><?php _e( 'Check this box to hide the list item post meta date.', 'scc_post_meta' ); ?></label>
+		<?php
 	}
 	
 	
