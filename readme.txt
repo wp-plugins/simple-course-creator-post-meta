@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: customizer, series, course, lesson, taxonomy
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,9 @@ The post meta customizer options will be merged with SCC Customizer.
 3. post meta output
 
 == Changelog ==
+
+= 1.0.3 =
+* fix: languages directory path
 
 = 1.0.2 =
 * Fix: PHP warnings for sanitization of plugin settings
