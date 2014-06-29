@@ -3,12 +3,12 @@
  * Plugin Name: SCC - Post Meta
  * Plugin URI: http://buildwpyourself.com/downloads/scc-post-meta/
  * Description: Add post meta information to each post in the output listing
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Sean Davis
  * Author URI: http://seandavis.co
  * License: GPL2
  * Requires at least: 3.8
- * Tested up to: 3.9
+ * Tested up to: 3.9.1
  * Text Domain: scc_post_meta
  * Domain Path: /languages/
  * 
@@ -52,7 +52,7 @@ class Simple_Course_Creator_Post_Meta {
 		define( 'SCCPM_NAME', 'Simple Course Creator Post Meta' );
 		
 		// define plugin version
-		define( 'SCCPM_VERSION', '1.0.3' );
+		define( 'SCCPM_VERSION', '1.0.4' );
 		
 		// define plugin directory
 		define( 'SCCPM_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );

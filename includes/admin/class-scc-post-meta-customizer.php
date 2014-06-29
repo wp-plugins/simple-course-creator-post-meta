@@ -62,7 +62,7 @@ class SCC_Post_Meta_Customizer {
 			
 				$wp_customize->add_section( 'scc_post_meta_customizer', array(
 			    	'title'       	=> 'SCC Post Meta ' . __( 'Design', 'scc_post_meta' ),
-					'description' 	=> __( 'Use this section to style the post meta output. For complete SCC output style options, you should install the ', 'scc_post_meta' ) . '<a href="http://buildwpyourself.com/downloads/scc-customizer/" target="_blank">' . 'SCC Customizer' . __( ' plugin', 'scc_post_meta' ) . '</a>.',
+					'description' 	=> sprintf( __( 'Use this section to style the post meta output. For complete SCC output style options, you should install the %s plugin.', 'scc_post_meta' ), '<a href="http://buildwpyourself.com/downloads/scc-customizer/" target="_blank">SCC Customizer</a>' ),
 					'priority'   	=> 100,
 				) );
 				
@@ -95,6 +95,23 @@ class SCC_Post_Meta_Customizer {
 			}
 		}
 	}
+
+
+	/**
+	 * sanitize hex colors
+	 */
+	public function scc_post_meta_sanitize_hex_color( $color ) {
+		if ( '' === $color ) :
+			return '';
+	    endif;
+	
+		// 3 or 6 hex digits, or the empty string.
+		if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) :
+			return $color;
+	    endif;
+	
+		return null;
+	}
 	
 	
 	/**
@@ -113,7 +130,7 @@ class SCC_Post_Meta_Customizer {
 					
 					// post meta text color
 					if ( $scc_pm_text_color ) {
-						echo "color:{$scc_pm_text_color};";		
+						echo 'color:' . $this->scc_post_meta_sanitize_hex_color( $scc_pm_text_color ) . ';';		
 					}
 			
 				echo '}';			
