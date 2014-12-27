@@ -15,35 +15,35 @@ if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
 
 class SCC_Post_Meta_Settings {
 
-		
+
 	/**
 	 * constructor for SCC_Post_Meta_Settings class
 	 */
 	public function __construct() {
-		
+
 		// register settings
 		add_action( 'admin_init', array( $this, 'register_settings' ), 20, 2 );
 	}
-	
-	
+
+
 	/**
 	 * register SCC post meta settings
 	 */
 	public function register_settings() {
-		
+
 		// add option for hiding the author
 		add_settings_field( 'display_author', __( 'Post Meta Author', 'scc_post_meta'), array( $this, 'post_meta_author' ), 'simple_course_creator', 'course_display_settings' );
-		
+
 		// add option for hiding the date
 		add_settings_field( 'display_date', __( 'Post Meta Date', 'scc_post_meta'), array( $this, 'post_meta_date' ), 'simple_course_creator', 'course_display_settings' );
-		
+
 		if ( get_option( 'course_display_settings' ) == false ) {
 			update_option( 'display_author', '0' );
 			update_option( 'display_date', '0' );
 		}
 	}
-	
-	
+
+
 	/**
 	 * create post meta author option
 	 *
@@ -56,8 +56,8 @@ class SCC_Post_Meta_Settings {
 		<label for="display_post_meta_author"><?php _e( 'Check this box to hide the list item post meta author.', 'scc_post_meta' ); ?></label>
 		<?php
 	}
-	
-	
+
+
 	/**
 	 * create post meta date option
 	 *
@@ -70,8 +70,8 @@ class SCC_Post_Meta_Settings {
 		<label for="display_post_meta_date"><?php _e( 'Check this box to hide the list item post meta date.', 'scc_post_meta' ); ?></label>
 		<?php
 	}
-	
-	
+
+
 	/**
 	 * save options settings
 	 *
@@ -79,13 +79,13 @@ class SCC_Post_Meta_Settings {
 	 */
 	public function save_settings( $input ) {
 		$post_meta_options = get_option( 'course_display_settings' );
-		
+
 		// hide post author
 		$post_meta_options['display_author'] = ( isset( $input['display_author'] ) && $input['display_author'] == true ? '1' : '0' );
-		
+
 		// hide post date
 		$post_meta_options['display_date'] = ( isset( $input['display_date'] ) && $input['display_date'] == true ? '1' : '0' );
-		
+
 		return $input;
 	}
 }

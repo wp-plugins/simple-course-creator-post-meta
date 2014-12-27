@@ -3,8 +3,8 @@ Contributors: sdavis2702
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S
 Tags: customizer, series, course, lesson, taxonomy, sdavis2702
 Requires at least: 3.8
-Tested up to: 3.9.1
-Stable tag: 1.0.5
+Tested up to: 4.1
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,20 +51,24 @@ The post meta customizer options will be merged with SCC Customizer.
 
 == Changelog ==
 
+= 1.0.6 =
+* improved: removed white space
+* improved: rearranged language files
+
 = 1.0.5 =
-* improve: user input sanitization
+* improved: user input sanitization
 
 = 1.0.4 =
-* fix: typos
+* fixed: typos
 
 = 1.0.3 =
-* fix: languages directory path
+* fixed: languages directory path
 
 = 1.0.2 =
-* Fix: PHP warnings for sanitization of plugin settings
+* Fixed: PHP warnings for sanitization of plugin settings
 
 = 1.0.1 =
-* New: add filters for post author and published date output
+* Added: filters for post author and published date output
 
 = 1.0.0 =
 * first stable version
